@@ -2,7 +2,7 @@ name: Web Testing - Test No1
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 jobs:
   build:
     name: Build
