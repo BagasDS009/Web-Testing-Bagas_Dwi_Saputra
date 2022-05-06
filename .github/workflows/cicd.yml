@@ -31,11 +31,3 @@ jobs:
           # Optional: do not specify to match Chrome's version
           chromedriver-version: '99.0.4844.51'
       - run: chromedriver --url-base=/wd/hub &
-#  Test:
-#    name: Testing Web Automation
-#    needs: Chrome
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v2
-#      - name: Run Web Test
-#        run: mvn clean verify
