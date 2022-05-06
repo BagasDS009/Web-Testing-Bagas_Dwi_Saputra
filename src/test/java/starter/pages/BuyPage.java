@@ -16,13 +16,13 @@ public class BuyPage extends PageObject {
     }
 
     private By buttonSearch() {
-        return By.xpath("//label[contains(text(),'Select category')]");
+        return By.xpath("//*[@id=\"app\"]/div[1]/main/div/div/div[1]/div/div[1]/div[1]/div[3]/div/i");
     }
     private By cariCategory() {
-        return By.className("//*[@class=\"v-list-item v-list-item--link theme--light\"][96]");
+        return By.xpath("//*[@class=\"v-list-item v-list-item--link theme--light\"][1]/div/div");
     }
     private By pageCategory() {
-        return By.xpath("//*[@id=\"app\"]/div[1]/main/div/div/div[2]/div/div[1]");
+        return By.xpath("//*[@class=\"v-alert__wrapper\"]/div");
     }
 
     private By buttonShoppingChart() {

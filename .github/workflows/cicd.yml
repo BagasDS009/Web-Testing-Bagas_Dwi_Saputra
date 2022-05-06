@@ -31,7 +31,7 @@ jobs:
       - run: chromedriver --url-base=/wd/hub &
   Test:
     name: Testing Web Automation
-    needs: Chrome
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

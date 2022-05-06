@@ -14,3 +14,9 @@ Feature:As a user I want to buy some on altashop items
     When I clicked the buy button for all three items twice
     And I click the button shopping cart
     Then Check the ordered items on the shopping cart
+
+  @ValidatePageCategory
+  Scenario: As a user I want to see all categories and choose one to view
+    When I click categories
+    And I choose one
+    Then I on the categories page
