@@ -31,9 +31,9 @@ jobs:
       - run: chromedriver --url-base=/wd/hub &
   Test:
     name: Testing Web Automation
-    needs: build
+    needs: Chrome
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Run Web Test
-        run: mvn clean verify
+      - run: mvn clean verify
