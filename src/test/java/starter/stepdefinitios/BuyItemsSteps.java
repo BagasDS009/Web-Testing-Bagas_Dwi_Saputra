@@ -35,16 +35,16 @@ public class BuyItemsSteps {
         buyPage.clickButtonBuyItemsThree();
     }
 
-    @When("I click categories")
-    public void iClickCategories() {
-        buyPage.clickButtonSearch();
-    }
-    @And("I choose one")
-    public void iChooseOne() {
-        buyPage.searchCategory();
-    }
-    @Then("I on the categories page")
-    public void iOnTheCategoriesPage() {
-        buyPage.validatePageCategory();
-    }
+//    @When("I click categories")
+//    public void iClickCategories() {
+//        buyPage.clickButtonSearch();
+//    }
+//    @And("I choose one")
+//    public void iChooseOne() {
+//        buyPage.searchCategory();
+//    }
+//    @Then("I on the categories page")
+//    public void iOnTheCategoriesPage() {
+//        buyPage.validatePageCategory();
+//    }
 }
