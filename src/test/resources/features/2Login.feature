@@ -31,3 +31,20 @@ Feature: as a user i want to buy but i need to login account
     Then I click button login
     And Login successful validation
 
+  @LogoutAccount
+  Scenario: As a user I want to log out of the account
+    And I input valid email login
+    And I input valid password login
+    Then I click button login
+    And I click button user
+    And I logout account
+    And Validate that the account is logged out
+  @TransaksiAccount
+  Scenario: As a user I want to see transaction of the account
+    And I input valid email login
+    And I input valid password login
+    Then I click button login
+    And I click button user
+    And I transaction account
+    And Validate that the account has entered the transaction page
+

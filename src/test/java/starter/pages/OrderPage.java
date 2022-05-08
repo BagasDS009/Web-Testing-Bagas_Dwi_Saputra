@@ -6,22 +6,22 @@ import org.openqa.selenium.By;
 
 public class OrderPage extends PageObject {
     private By buttonAddItemsOne() {
-        return By.xpath("//*[@id=\"order-259\"]/div[2]/button[2]");
+        return By.xpath("//*[@id=\"order-394\"]/div[2]/button[2]");
     }
     private By buttonReduceItemsOne() {
-        return By.xpath("//*[@id=\"order-259\"]/div[2]/button[1]");
+        return By.xpath("//*[@id=\"order-394\"]/div[2]/button[1]");
     }
     private By buttonAddItemsTwo() {
-        return By.xpath("//*[@id=\"order-262\"]/div[2]/button[2]");
+        return By.xpath("//*[@id=\"order-400\"]/div[2]/button[2]");
     }
     private By buttonReduceItemsTwo() {
-        return By.xpath("//*[@id=\"order-262\"]/div[2]/button[1]");
+        return By.xpath("//*[@id=\"order-400\"]/div[2]/button[1]");
     }
     private By buttonAddItemsThree() {
-        return By.xpath("//*[@id=\"order-264\"]/div[2]/button[2]");
+        return By.xpath("//*[@id=\"order-419\"]/div[2]/button[2]");
     }
     private By buttonReduceItemsThree() {
-        return By.xpath("//*[@id=\"order-264\"]/div[2]/button[1]");
+        return By.xpath("//*[@id=\"order-419\"]/div[2]/button[1]");
     }
     private By buttonBayar() {
         return By.xpath("//*[@id=\"button-bayar\"]");

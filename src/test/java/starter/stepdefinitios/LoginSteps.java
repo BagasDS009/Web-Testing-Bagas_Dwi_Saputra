@@ -6,9 +6,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
 import starter.pages.LoginPage;
+import starter.pages.OrderPage;
 import starter.pages.RegisterPage;
 
 public class LoginSteps {
+    @Steps
+    OrderPage orderPage;
     @Steps
     RegisterPage registerPage;
     @Steps
@@ -52,5 +55,27 @@ public class LoginSteps {
     @And("Login failed validation invalid password and email")
     public void loginFailedValidationInvalidPasswordAndEmail() {
         loginPage.loginInvalidPassword();
+    }
+
+    @And("I click button user")
+    public void iClickButtonUser() {
+        loginPage.userButton();
+    }
+    @And("I logout account")
+    public void iLogoutAccount() {
+        loginPage.logoutButton();
+    }
+    @And("Validate that the account is logged out")
+    public void validateThatTheAccountIsLoggedOut() {
+        registerPage.validateOnLoginPage();
+    }
+
+    @And("I transaction account")
+    public void iTransactionAccount() {
+        loginPage.transaksiButton();
+    }
+    @And("Validate that the account has entered the transaction page")
+    public void validateThatTheAccountHasEnteredTheTransactionPage() {
+        orderPage.validatePageTransaction();
     }
 }

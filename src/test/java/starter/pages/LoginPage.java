@@ -23,9 +23,15 @@ public class LoginPage extends PageObject {
     private By invalidPassword() {
         return By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div[2]/div[1]/div/div[1]");
     }
-//    private By iconUser() {
-//        return By.xpath("//*[@id=\"app\"]/div[1]/header/div/button[2]/span/i");
-//    }
+    private By iconUser() {
+        return By.xpath("//*[@class=\"v-toolbar__content\"]/button[2]");
+    }
+    private By iconTransaksi() {
+        return By.xpath("//*[@class=\"v-list v-sheet theme--light\"]/div/div[2]");
+    }
+    private By iconLogout() {
+        return By.xpath("//*[@class=\"v-list v-sheet theme--light\"]/div[2]/div[2]");
+    }
     @Step
     public void inputEmailLogin(String emailLogin) {
         $(emailFieldLogin()).type(emailLogin);
@@ -49,5 +55,17 @@ public class LoginPage extends PageObject {
     @Step
     public void loginInvalidPassword() {
         $(invalidPassword()).isDisabled();
+    }
+    @Step
+    public void userButton() {
+        $(iconUser()).click();
+    }
+    @Step
+    public void transaksiButton() {
+        $(iconTransaksi()).click();
+    }
+    @Step
+    public void logoutButton() {
+        $(iconLogout()).click();
     }
 }

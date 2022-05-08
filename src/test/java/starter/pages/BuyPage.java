@@ -6,13 +6,13 @@ import org.openqa.selenium.By;
 
 public class BuyPage extends PageObject {
     private By buttonItemsOne() {
-        return By.xpath("//*[@id=\"259\"]/div/div[3]/div[2]/button[2]");
+        return By.xpath("//*[@id=\"394\"]/div/div[3]/div[2]/button[2]");
     }
     private By buttonItemsTwo() {
-        return By.xpath("//*[@id=\"262\"]/div/div[3]/div[2]/button[2]");
+        return By.xpath("//*[@id=\"400\"]/div/div[3]/div[2]/button[2]");
     }
     private By buttonItemsThree() {
-        return By.xpath("//*[@id=\"264\"]/div/div[3]/div[2]/button[2]");
+        return By.xpath("//*[@id=\"419\"]/div/div[3]/div[2]/button[2]");
     }
 
     private By buttonSearch() {
