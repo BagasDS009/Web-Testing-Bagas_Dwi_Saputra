@@ -27,7 +27,7 @@ public class OrderPage extends PageObject {
         return By.xpath("//*[@class=\"text-right mt-3\"]/button");
     }
     private By pageTransaction() {
-        return By.xpath("//*[@class=\"container\"]/h1");
+        return By.xpath("//*[@class=\"container\"]/div/div");
     }
     private By pageOrderEmpty() {
         return  By.xpath("//*[@class=\"v-main__wrap\"]/div/div/div/div");
