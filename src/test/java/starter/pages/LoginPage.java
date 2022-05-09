@@ -27,10 +27,10 @@ public class LoginPage extends PageObject {
         return By.xpath("//*[@class=\"v-toolbar__content\"]/button[2]");
     }
     private By iconTransaksi() {
-        return By.xpath("//*[@class=\"v-list v-sheet theme--light\"]/div/div[2]");
+        return By.xpath("///*[@role=\"menu\"]/div/div[1]/div[2]");
     }
     private By iconLogout() {
-        return By.xpath("//*[@class=\"v-list v-sheet theme--light\"]/div[2]/div[2]");
+        return By.xpath("//*[@role=\"menu\"]/div/div[2]/div[2]");
     }
     @Step
     public void inputEmailLogin(String emailLogin) {
