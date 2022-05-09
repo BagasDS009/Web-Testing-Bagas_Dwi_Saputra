@@ -12,16 +12,16 @@ public class LoginPage extends PageObject {
         return By.xpath("//label[contains(text(),'Password')]/following-sibling::input");
     }
     private By buttonLogin() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div[2]/form/div[3]/button");
+        return By.xpath("//*[@class=\"text-center\"]/button");
     }
     private By loginValidation() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div[1]/div/div[1]");
+        return By.xpath("//*[@class=\"v-input__control\"]");
     }
     private By invalidEmail() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div[2]/div[1]/div/div[1]");
+        return By.xpath("//*[@class=\"v-card__text\"]/div/div/div");
     }
     private By invalidPassword() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div[2]/div[1]/div/div[1]");
+        return By.xpath("//*[@class=\"v-card__text\"]/div/div/div");
     }
     private By iconUser() {
         return By.xpath("//*[@class=\"v-toolbar__content\"]/button[2]");

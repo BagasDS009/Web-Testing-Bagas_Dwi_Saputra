@@ -15,22 +15,22 @@ public class RatingPage extends PageObject {
         return By.xpath("//*[@id=\"419\"]/div/div[3]/div[2]/button[1]");
     }
     private By rate1() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div/div/div/div/button[1]");
+        return By.xpath("//*[@class=\"v-rating v-rating--dense\"]/button[1]");
     }
     private By rate2() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div/div/div/div/button[2]");
+        return By.xpath("//*[@class=\"v-rating v-rating--dense\"]/button[2]");
     }
     private By rate3() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div/div/div/div/button[3]");
+        return By.xpath("//*[@class=\"v-rating v-rating--dense\"]/button[3]");
     }
     private By rate4() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div/div/div/div/button[4]");
+        return By.xpath("//*[@class=\"v-rating v-rating--dense\"]/button[4]");
     }
     private By rate5() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div/div/div/div/button[5]");
+        return By.xpath("//*[@class=\"v-rating v-rating--dense\"]/button[5]");
     }
     private By ratingpage() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div/p[1]");
+        return By.xpath("//*[@class=\"row\"]");
     }
 
     @Step

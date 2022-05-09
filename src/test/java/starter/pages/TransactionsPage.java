@@ -6,22 +6,22 @@ import org.openqa.selenium.By;
 
 public class TransactionsPage extends PageObject {
     private By iconProduk() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div/div[1]/table/thead/tr/th[1]");
+        return By.xpath("//*[@class=\"v-data-table-header\"]/tr/th[1]");
     }
     private By iconHarga() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div/div[1]/table/thead/tr/th[2]");
+        return By.xpath("//*[@class=\"v-data-table-header\"]/tr/th[2]");
     }
     private By iconBanyaknya() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div/div[1]/table/thead/tr/th[3]");
+        return By.xpath("//*[@class=\"v-data-table-header\"]/tr/th[3]");
     }
     private By iconSubHarga() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div/div[1]/table/thead/tr/th[4]");
+        return By.xpath("//*[@class=\"v-data-table-header\"]/tr/th[4]");
     }
     private By iconSelanjutnya() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div/div[2]/div[4]");
+        return By.xpath("//*[@class=\"v-data-footer\"]/div[4]");
     }
     private By iconKembali() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div/div[2]/div[3]");
+        return By.xpath("//*[@class=\"v-data-footer\"]/div[3]");
     }
     @Step
     public void clickButtonProduk() {

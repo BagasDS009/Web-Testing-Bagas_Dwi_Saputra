@@ -24,13 +24,13 @@ public class OrderPage extends PageObject {
         return By.xpath("//*[@id=\"order-419\"]/div[2]/button[1]");
     }
     private By buttonBayar() {
-        return By.xpath("//*[@id=\"button-bayar\"]");
+        return By.xpath("//*[@class=\"text-right mt-3\"]/button");
     }
     private By pageTransaction() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div");
+        return By.xpath("//*[@class=\"container\"]/h1");
     }
     private By pageOrderEmpty() {
-        return  By.xpath("//*[@id=\"app\"]/div/main/div/div/div/div");
+        return  By.xpath("//*[@class=\"v-main__wrap\"]/div/div/div/div");
     }
     @Step
     public void clickButtonAddItemsOne() {

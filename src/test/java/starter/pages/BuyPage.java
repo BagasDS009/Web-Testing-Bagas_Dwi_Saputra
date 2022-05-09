@@ -16,7 +16,7 @@ public class BuyPage extends PageObject {
     }
 
     private By buttonSearch() {
-        return By.xpath("//*[@id=\"app\"]/div[1]/main/div/div/div[1]/div/div[1]/div[1]/div[3]/div/i");
+        return By.xpath("//*[@class=\"v-select__slot\"]/div[3]/div/i");
     }
     private By cariCategory() {
         return By.xpath("//*[@class=\"v-list-item v-list-item--link theme--light\"][1]/div/div");
@@ -26,10 +26,10 @@ public class BuyPage extends PageObject {
     }
 
     private By buttonShoppingChart() {
-        return By.xpath("//*[@id=\"app\"]/div/header/div/button[1]");
+        return By.xpath("//*[@class=\"v-toolbar__content\"]/button");
     }
     private By pageOrder() {
-        return By.xpath("//*[@id=\"app\"]/div/main/div/div/div[1]/div");
+        return By.xpath("//*[@class=\"v-main__wrap\"]/div/div/div/div");
     }
     @Step
     public void clickButtonBuyItemsOne(){
