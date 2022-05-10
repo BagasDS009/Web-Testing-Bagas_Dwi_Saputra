@@ -45,10 +45,6 @@ public class RegisterSteps {
         registerPage.clickButtonRegisterToLoginPage();
         registerPage.validateOnLoginPage();
     }
-    @And("I input invalid nama in register")
-    public void iInputInvalidNamaInRegister() {
-        registerPage.inputNameRegister("Bagas Dwi Saputra");
-    }
     @And("I input invalid email in register")
     public void iInputEmailRegister() {
         registerPage.inputEmailRegister("08219974");

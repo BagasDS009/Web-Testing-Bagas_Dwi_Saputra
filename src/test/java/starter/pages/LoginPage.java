@@ -27,7 +27,7 @@ public class LoginPage extends PageObject {
         return By.xpath("//*[@class=\"v-toolbar__content\"]/button[2]");
     }
     private By iconTransaksi() {
-        return By.xpath("///*[@role=\"menu\"]/div/div[1]");
+        return By.xpath("//*[@role=\"menu\"]/div/div[1]");
     }
     private By iconLogout() {
         return By.xpath("//*[@role=\"menu\"]/div/div[2]");

@@ -19,12 +19,6 @@ Feature: as a user i want to login but before that do the registration first
     And I input invalid email in register
     And I input password in register
     Then I click button register
-  @InvalidName
-  Scenario: as a user I want to register first but the name is invalid
-    And I input invalid nama in register
-    And I input email in register
-    And I input password in register
-    Then I click button register
   @NameAlreadyInUse
   Scenario: as a user I want to register first but the name is already in use
     And I input nama is already in use
