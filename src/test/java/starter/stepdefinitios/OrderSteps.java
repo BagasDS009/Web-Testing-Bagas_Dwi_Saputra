@@ -32,9 +32,9 @@ public class OrderSteps {
     }
     @And("I click the remove button once on each item")
     public void iClickTheRemoveButtonOnceOnEachItem() {
-        orderPage.clickButtonReduceItemsOne();
-        orderPage.clickButtonReduceItemsTwo();
         orderPage.clickButtonReduceItemsThree();
+        orderPage.clickButtonReduceItemsTwo();
+        orderPage.clickButtonReduceItemsOne();
     }
     @And("validate on page order is empty")
     public void validateOnPageOrderIsEmpty() {

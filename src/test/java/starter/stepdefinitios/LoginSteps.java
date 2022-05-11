@@ -44,17 +44,20 @@ public class LoginSteps {
     public void iInputValidPasswordLogin() {
         loginPage.inputPasswordLogin("NMklop90");
     }
-    @And("Login failed validation invalid password")
-    public void loginFailedValidationInvalidPassword() {
+    @And("Login failed validation invalid password {string}")
+    public void loginFailedValidationInvalidPassword(String errorpassword) {
         loginPage.loginInvalidPassword();
+        loginPage.validateEqualErrorPassword(errorpassword);
     }
-    @And("Login failed validation invalid email")
-    public void loginFailedValidationInvalidEmail() {
+    @And("Login failed validation invalid email {string}")
+    public void loginFailedValidationInvalidEmail(String erroremail) {
         loginPage.loginInvalidEmail();
+        loginPage.validateEqualErrorEmail(erroremail);
     }
-    @And("Login failed validation invalid password and email")
-    public void loginFailedValidationInvalidPasswordAndEmail() {
-        loginPage.loginInvalidPassword();
+    @And("Login failed validation invalid password and email {string}")
+    public void loginFailedValidationInvalidPasswordAndEmail(String erroremail) {
+        loginPage.loginInvalidEmail();
+        loginPage.validateEqualErrorEmail(erroremail);
     }
 
     @And("I click button user")

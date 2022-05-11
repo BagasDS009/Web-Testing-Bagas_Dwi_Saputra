@@ -17,10 +17,7 @@ public class LoginPage extends PageObject {
     private By loginValidation() {
         return By.xpath("//*[@class=\"v-input__control\"]");
     }
-    private By invalidEmail() {
-        return By.xpath("//*[@class=\"v-card__text\"]/div/div/div");
-    }
-    private By invalidPassword() {
+    private By errorMessager() {
         return By.xpath("//*[@class=\"v-card__text\"]/div/div/div");
     }
     private By iconUser() {
@@ -45,16 +42,24 @@ public class LoginPage extends PageObject {
         $(buttonLogin()).click();
     }
     @Step
-    public void loginSuccessfulValidation() {
-        $(loginValidation()).isDisabled();
+    public boolean loginSuccessfulValidation() {
+        return $(loginValidation()).isDisabled();
     }
     @Step
-    public void loginInvalidEmail() {
-        $(invalidEmail()).isDisabled();
+    public boolean loginInvalidEmail() {
+        return $(errorMessager()).isDisabled();
     }
     @Step
-    public void loginInvalidPassword() {
-        $(invalidPassword()).isDisabled();
+    public boolean validateEqualErrorEmail(String erroremail){
+        return $(errorMessager()).getText().equalsIgnoreCase(erroremail);
+    }
+    @Step
+    public boolean loginInvalidPassword() {
+        return $(errorMessager()).isDisabled();
+    }
+    @Step
+    public boolean validateEqualErrorPassword(String errorpassword){
+        return $(errorMessager()).getText().equalsIgnoreCase(errorpassword);
     }
     @Step
     public void userButton() {

@@ -6,15 +6,14 @@ import org.openqa.selenium.By;
 
 public class BuyPage extends PageObject {
     private By buttonItemsOne() {
-        return By.xpath("//*[@id=\"394\"]/div/div[3]/div[2]/button[2]");
+        return By.xpath("//*[@class=\"row align-stretch\"]/div[7]/div/div[3]/div[2]/button[2]");
     }
     private By buttonItemsTwo() {
-        return By.xpath("//*[@id=\"400\"]/div/div[3]/div[2]/button[2]");
+        return By.xpath("//*[@class=\"row align-stretch\"]/div[13]/div/div[3]/div[2]/button[2]");
     }
     private By buttonItemsThree() {
-        return By.xpath("//*[@id=\"419\"]/div/div[3]/div[2]/button[2]");
+        return By.xpath("//*[@class=\"row align-stretch\"]/div[17]/div/div[3]/div[2]/button[2]");
     }
-
     private By buttonSearch() {
         return By.xpath("//*[@class=\"v-select__slot\"]/div[3]/div/i");
     }
@@ -49,8 +48,8 @@ public class BuyPage extends PageObject {
         $(cariCategory()).click();
     }
     @Step
-    public void validatePageCategory() {
-        $(pageCategory()).isDisabled();
+    public boolean validatePageCategory() {
+      return $(pageCategory()).isDisabled();
     }
 
     @Step
@@ -63,7 +62,7 @@ public class BuyPage extends PageObject {
         $(buttonShoppingChart()).click();
     }
     @Step
-    public void validateOnPageOrder() {
-        $(pageOrder()).isDisabled();
+    public boolean validateOnPageOrder() {
+       return $(pageOrder()).isDisabled();
     }
 }

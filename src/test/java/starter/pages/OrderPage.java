@@ -6,22 +6,22 @@ import org.openqa.selenium.By;
 
 public class OrderPage extends PageObject {
     private By buttonAddItemsOne() {
-        return By.xpath("//*[@id=\"order-394\"]/div[2]/button[2]");
+        return By.xpath("//*[@class=\"v-card__text\"]/div[1]/div[2]/button[2]");
     }
     private By buttonReduceItemsOne() {
-        return By.xpath("//*[@id=\"order-394\"]/div[2]/button[1]");
+        return By.xpath("//*[@class=\"v-card__text\"]/div[1]/div[2]/button[1]");
     }
     private By buttonAddItemsTwo() {
-        return By.xpath("//*[@id=\"order-400\"]/div[2]/button[2]");
+        return By.xpath("//*[@class=\"v-card__text\"]/div[2]/div[2]/button[2]");
     }
     private By buttonReduceItemsTwo() {
-        return By.xpath("//*[@id=\"order-400\"]/div[2]/button[1]");
+        return By.xpath("//*[@class=\"v-card__text\"]/div[2]/div[2]/button[1]");
     }
     private By buttonAddItemsThree() {
-        return By.xpath("//*[@id=\"order-419\"]/div[2]/button[2]");
+        return By.xpath("//*[@class=\"v-card__text\"]/div[3]/div[2]/button[2]");
     }
     private By buttonReduceItemsThree() {
-        return By.xpath("//*[@id=\"order-419\"]/div[2]/button[1]");
+        return By.xpath("//*[@class=\"v-card__text\"]/div[3]/div[2]/button[1]");
     }
     private By buttonBayar() {
         return By.xpath("//*[@class=\"text-right mt-3\"]/button");
@@ -61,11 +61,11 @@ public class OrderPage extends PageObject {
         $(buttonBayar()).click();
     }
     @Step
-    public void validatePageTransaction() {
-        $(pageTransaction()).isDisabled();
+    public boolean validatePageTransaction() {
+        return $(pageTransaction()).isDisabled();
     }
     @Step
-    public void validatePageOrderIsEmpty() {
-        $(pageOrderEmpty()).isDisabled();
+    public boolean validatePageOrderIsEmpty() {
+        return $(pageOrderEmpty()).isDisabled();
     }
 }

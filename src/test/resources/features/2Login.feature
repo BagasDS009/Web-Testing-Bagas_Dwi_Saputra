@@ -11,19 +11,19 @@ Feature: as a user i want to buy but i need to login account
     And I input valid email login
     And I input invalid password login
     Then I click button login
-    And Login failed validation invalid password
+    And Login failed validation invalid password "email or password is invalid"
   @InvalidEmail
   Scenario: As a user I login with a invalid email and valid password
     And I input invalid email login
     And I input valid password login
     Then I click button login
-    And Login failed validation invalid email
+    And Login failed validation invalid email "record not found"
   @InvalidEmailAndPassword
   Scenario: As a user I login with a invalid email and password
     And I input invalid email login
     And I input invalid password login
     Then I click button login
-    And Login failed validation invalid password and email
+    And Login failed validation invalid password and email "record not found"
   @ValidEmailAndPassword
   Scenario: As a user I login with a valid email and password
     And I input valid email login

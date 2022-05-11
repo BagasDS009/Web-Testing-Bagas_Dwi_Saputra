@@ -6,13 +6,7 @@ import org.openqa.selenium.By;
 
 public class RatingPage extends PageObject {
     private By buttonDetailItemsOne() {
-        return By.xpath("//*[@id=\"394\"]/div/div[3]/div[2]/button[1]");
-    }
-    private By buttonDetailItemsTwo() {
-        return By.xpath("//*[@id=\"400\"]/div/div[3]/div[2]/button[1]");
-    }
-    private By buttonDetailItemsThree() {
-        return By.xpath("//*[@id=\"419\"]/div/div[3]/div[2]/button[1]");
+        return By.xpath("//*[@class=\"row align-stretch\"]/div[15]/div/div[3]/div[2]/button[1]");
     }
     private By rate1() {
         return By.xpath("//*[@class=\"v-rating v-rating--dense\"]/button[1]");
@@ -38,14 +32,6 @@ public class RatingPage extends PageObject {
         $(buttonDetailItemsOne()).click();
     }
     @Step
-    public void clickButtonDetailItemsTwo() {
-        $(buttonDetailItemsTwo()).click();
-    }
-    @Step
-    public void clickButtonDetailItemsThree() {
-        $(buttonDetailItemsThree()).click();
-    }
-    @Step
     public void rateOne() {
         $(rate1()).click();
     }
@@ -66,8 +52,8 @@ public class RatingPage extends PageObject {
         $(rate5()).click();
     }
     @Step
-    public void validateRatingPage() {
-        $(ratingpage()).isDisabled();
+    public boolean validateRatingPage() {
+        return $(ratingpage()).isDisabled();
     }
 
 }

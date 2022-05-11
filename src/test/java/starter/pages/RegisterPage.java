@@ -29,6 +29,9 @@ public class RegisterPage extends PageObject {
     private By buttonRegister() {
          return By.xpath("//*[@class=\"text-center\"]/button");
     }
+    private By errorLink() {
+        return By.xpath("//*[@class=\"v-alert__wrapper\"]/div");
+    }
     @Step
     public void openPage() {
         open();
@@ -38,16 +41,16 @@ public class RegisterPage extends PageObject {
          $(iconButtonLogin()).click();
     }
     @Step
-    public void validateOnLoginPage() {
-         $(loginPage()).isDisabled();
+    public boolean validateOnLoginPage() {
+         return $(loginPage()).isDisabled();
     }
     @Step
     public void clickButtonRegisterToPageRegister() {
          $(registerLink()).click();
     }
     @Step
-    public void validateOnRegisterPage() {
-         $(registerPage()).isDisabled();
+    public boolean validateOnRegisterPage() {
+       return $(registerPage()).isDisabled();
     }
     @Step
     public void inputNameRegister(String namaRegister) {
@@ -65,5 +68,16 @@ public class RegisterPage extends PageObject {
     public void clickButtonRegisterToLoginPage() {
         $(buttonRegister()).click();
     }
-
+    @Step
+    public boolean validateErrorDisplay() {
+        return $(errorLink()).isDisabled();
+    }
+    @Step
+    public boolean validateEqualErrorName(String errorname) {
+        return $(errorLink()).getText().equalsIgnoreCase(errorname);
+    }
+    @Step
+    public boolean validateEqualErrorEmail(String erroremail) {
+        return $(errorLink()).getText().equalsIgnoreCase(erroremail);
+    }
 }

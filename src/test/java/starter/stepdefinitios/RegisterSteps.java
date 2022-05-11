@@ -7,7 +7,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
 import starter.pages.RegisterPage;
-
 public class RegisterSteps {
     @Steps
     RegisterPage registerPage;
@@ -40,7 +39,7 @@ public class RegisterSteps {
     public void iInputPasswordRegister() {
         registerPage.inputPasswordRegister("NMklop90");
     }
-    @Then("I click button register")
+    @And("I click button register")
     public void iClickButtonRegister() {
         registerPage.clickButtonRegisterToLoginPage();
         registerPage.validateOnLoginPage();
@@ -53,9 +52,9 @@ public class RegisterSteps {
     public void iInputEmailIsAlreadyInUse() {
         registerPage.inputEmailRegister("NMklop90");
     }
-    @And("I input nama is already in use")
+    @And("I input invalid nama")
     public void iInputNamaIsAlreadyInUse() {
-        registerPage.inputNameRegister("Bagas Dwi Saputra");
+        registerPage.inputNameRegister(" ");
     }
     @And("I entered a successful name in the registration using faker")
     public void iEnteredASuccessfulNameInTheRegistrationUsingFaker() {
@@ -71,5 +70,20 @@ public class RegisterSteps {
     public void iEnteredASuccessfulPasswordInTheRegistrationUsingFaker() {
         Faker random = new Faker();
         registerPage.inputPasswordRegister(random.internet().password(8,14));
+    }
+
+    @Then("I am on the page login")
+    public void iAmOnThePageLogin() {
+        registerPage.validateOnLoginPage();
+    }
+    @Then("I can see error messege name {string}")
+    public void iCanSeeErrorMessegeName(String errorname) {
+        registerPage.validateErrorDisplay();
+        registerPage.validateEqualErrorName(errorname);
+    }
+    @Then("I can see error messege email {string}")
+    public void iCanSeeErrorMessegeEmail(String erroremail) {
+        registerPage.validateErrorDisplay();
+        registerPage.validateEqualErrorEmail(erroremail);
     }
 }
