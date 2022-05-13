@@ -18,7 +18,7 @@ public class BuyPage extends PageObject {
         return By.xpath("//*[@class=\"v-select__slot\"]/div[3]/div/i");
     }
     private By cariCategory() {
-        return By.xpath("//*[@class=\"v-list-item v-list-item--link theme--light\"][1]/div/div");
+        return By.xpath("//*[@class=\"v-list-item v-list-item--link theme--light\"][4]/div/div");
     }
     private By pageCategory() {
         return By.xpath("//*[@class=\"v-alert__wrapper\"]/div");
